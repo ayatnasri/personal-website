@@ -1,9 +1,7 @@
 :root {
     --white:#ece7e7;
     --black: #3a3838;
-    --orange1: rgb(195,88,23);
-    --orange2: rgb(237,145,33);
-    --orange3: rgb(255,165,0);
+    --gray: #757171;
     --red:  rgb(232,53,85);
     --blue: rgb(95,206,213);
     --yellow: rgb(199,189,40);
@@ -39,7 +37,7 @@ body {
     padding: 20px;
 }
 .flex-container a:hover {
-    color: rgb(95,206,213);
+    color: var(--red);
 }
 .myName {
     float: left;
@@ -73,7 +71,7 @@ body {
 }
 .flex-container2 a{
     text-decoration: none;
-    color: #ffffff;
+    color: var(--white);
     font-size: 20px;
     font-family: arial;
     font-weight: bold;
@@ -100,6 +98,15 @@ body {
 .third {
     background: var(--thirdBg);
 }
+.first:hover {
+    background: var(--gray);
+}
+.sec:hover {
+    background: var(--gray);
+}
+.third:hover {
+    background: var(--gray);
+}
 .follow-me {
     margin-top: 63px;
     margin-bottom: 0;
@@ -114,19 +121,13 @@ body {
     display: inline;
     padding: 35px;
     text-decoration: none;
-    color: white;
+    color: var(--white);
     font-size: 50px;
 }
-.light-theme {
-    --bg: var(--white);
-    --fontColor: var(--black);
-    --btnBg: var(--black);
-    --btnFontColor: var(--white);
-    --firstBg: var(--orange1);
-    --secBg: var(--orange2);
-    --thirdBg: var(--orange3);
+#icon a:hover {
+    font-size: 55px;
 }
-.dark-theme {
+.theme {
     --bg: var(--black);
     --fontColor: var(--white);
     --btnBg: var(--white);
@@ -135,15 +136,3 @@ body {
     --secBg: var(--blue);
     --thirdBg: var(--yellow);
 }
-.btn {
-    position: absolute;
-    top: 70px;
-    left: 50px;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-}
-.btn:focus { outline-style: none; }
